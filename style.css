@@ -21,7 +21,7 @@ body {
 
 .navbar {
   max-width: 1200px;
-  padding: 15px 40px;
+  padding: 0px 40px;
   margin: auto;
   display: flex;
   justify-content: space-between;
@@ -58,9 +58,8 @@ body {
 }
 
 .tabs nav ul li a:hover {
-  color: #28a745;
-  /* Fitness green */
-  border-bottom: 3px solid #28a745;
+  color: #21695c;
+  border-bottom: 3px solid #21695c;
 }
 
 /* Profile Section */
@@ -79,7 +78,7 @@ body {
 }
 
 .profile svg:hover {
-  fill: #28a745;
+  fill: #21695c;
 }
 
 .profile a {
@@ -90,7 +89,7 @@ body {
 }
 
 .profile a:hover {
-  color: #28a745;
+  color: #21695c;
 }
 
 /* Responsive */
@@ -109,13 +108,173 @@ body {
 
 /*----------------main-----------------*/
 
-.first{
-    height: auto;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+.first {
+  margin: auto;
+  width: 90vw;
+  height: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
-.left
-{
-    
+.left img {
+  width: 100px;
+  height: auto;
+}
+.left h1 {
+  color: #222;
+  font-size: 35px;
+  font-weight: bold;
+}
+.left span {
+  font-size: 40px;
+  color: #21695c;
+  font-weight: bold;
+  padding-bottom: 50px;
+}
+.left p {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+}
+.right img {
+  width: 700px;
+  height: auto;
+}
+button {
+  width: 200px;
+  height: 45px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+}
+.green {
+  background-color: #21695c;
+  color: #ffffff;
+  border: none;
+}
+.green:hover {
+  background-color: #ffffff;
+  color: #21695c;
+  border: 1px solid #21695c;
+}
+.white:hover {
+  background-color: #21695c;
+  color: #ffffff;
+  border: none;
+}
+.white {
+  background-color: #ffffff;
+  color: #21695c;
+  border: 1px solid #21695c;
+}
+.second {
+  margin: auto;
+  width: 90vw;
+  height: auto;
+}
+.second h1 span {
+  font-size: 20px;
+  color: #21695c;
+}
+.second h1 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+.row {
+  margin: auto;
+  /* padding: 50px; */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 50px;
+}
+.card a {
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #21695c;
+}
+.card img {
+  width: 450px;
+  height: auto;
+  margin-bottom: 50px;
+}
+.card p {
+  font-size: 20px;
+  font-weight: 300;
+  margin-top: 20px;
+}
+.left2 span {
+  color: #21695c;
+  font-size: 34px;
+  font-weight: bold;
+}
+.developers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  margin: auto;
+  padding: 300px 50px;
+  gap: 30px;
+}
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  text-align: center;
+}
+.text span {
+  color: #21695c;
+  font-size: 20px;
+  font-weight: 600;
+}
+.text h2 {
+  font-size: 30px;
+  font-weight: bold;
+}
+.text p {
+  font-size: 16px;
+  line-height: 25px;
+  word-spacing: 2px;
+  font-weight: 400;
+}
+.footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-bottom: 150px;
+}
+.one{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.one img {
+  width: 100px;
+  height: auto;
+}
+.two h3{
+color: #21695c;
+font-size: 20px;
+font-weight: 700;
+}
+.end{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 100px 10px 100px;
+  color: #21695c;
+}
+.end p a{
+  text-decoration: none;
+  color: #21695c;
 }
