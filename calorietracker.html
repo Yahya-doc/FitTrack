@@ -26,7 +26,6 @@ Log your workouts, track your progress, and get quick health tips that keep you 
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="healthtips.html">Health Tips</a></li>
-                        <li><a href="dailyfitnesslog.html">Daily Fitness Log</a></li>
                         <li><a href="calorietracker.html">Calorie Calculator</a></li>
                         <li><a href="bodymassindextracker.html">Body Mass Index Calculator</a></li>
                         <li><a href="aboutus.html">About Us</a></li>
@@ -46,6 +45,137 @@ Log your workouts, track your progress, and get quick health tips that keep you 
         </div>
     </section>
     <hr>
+    <div class="calculator">
+        <div class="calc">
+            <div>
+                <h2>Calorie Calculator</h2>
+                <p>The Calorie Calculator can be used to estimate the number <br> of calories a person needs to consume
+                    each day. This calculator <br> can also provide some simple guidelines for gaining or losing weight.
+                </p>
+            </div>
+            <div class="input">
+                <div>
+                    Age <input id="age" type="number" min="15" max="80">
+                </div>
+                <div>
+                    gender <input type="radio" id="gender" name="gender" value="Male">
+                    <label>Male</label>
+                    <input type="radio" id="gender" name="gender" value="Female">
+                    <label>Female</label>
+                </div>
+                <div>
+                    Height <input type="number" id="Height" placeholder="cm" min="120">
+                </div>
+                <div>
+                    Weight <input type="number" id="weight" placeholder="kg" min="40">
+                </div>
+                <div>
+                    Activity <select id="activity">
+                        <option>Basal Metabolic Rate (BMR)</option>
+                        <option>Sedentary: little or no exercise</option>
+                        <option>Light: exercise 1-3 times/week</option>
+                        <option>Moderate: exercise 4-5 times/week</option>
+                        <option>Active: daily exercise or intense exercise 3-4 times/week</option>
+                        <option>Very Active: intense exercise 6-7 times/week</option>
+                        <option>Extra Active: very intense exercise daily, or physical job</option>
+                    </select>
+                </div>
+                <div class="button">
+                    <button onclick="calculate()" class="green">Calculate</button>
+                    <button onclick="clear()" class="white">Clear</button>
+                </div>
+            </div>
+        </div>
+        <div class="output" id="output">
+            <h1>Result:</h1>
+            <h3 id="maintain"></h3>
+            <h3 id="weightLoss"></h3>
+            <h3 id="weightGain"></h3>
+        </div>
+        <div class="points">
+            <div>
+                <img src="images.jpeg" alt="">
+            </div>
+            <div>
+                <ul>
+                    <li>Exercise: 15-30 minutes of elevated heart rate activity.</li>
+                    <li>Intense exercise: 45-120 minutes of elevated heart rate activity.</li>
+                    <li>Very intense exercise: 2+ hours of elevated heart rate activity.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <br>
+    <section class="description">
+        <div class="content">
+            <h3>More about calorie calculator</h3><br>
+            <p>This Calorie Calculator is based on several equations, and the results of the calculator are based on an
+                estimated average. The Harris-Benedict Equation was one of the earliest equations used to calculate
+                basal metabolic rate (BMR), which is the amount of energy expended per day at rest. It was revised in
+                1984 to be more accurate and was used up until 1990, when the Mifflin-St Jeor Equation was introduced.
+                The Mifflin-St Jeor Equation also calculates BMR, and has been shown to be more accurate than the
+                revised Harris-Benedict Equation. The Katch-McArdle Formula is slightly different in that it calculates
+                resting daily energy expenditure (RDEE), which takes lean body mass into account, something that neither
+                the Mifflin-St Jeor nor the Harris-Benedict Equation do. Of these equations, the Mifflin-St Jeor
+                Equation is considered the most accurate equation for calculating BMR with the exception that the
+                Katch-McArdle Formula can be more accurate for people who are leaner and know their body fat percentage.
+                The three equations used by the calculator are listed below:
+                <br> <br>
+                <span>
+                    Mifflin-St Jeor Equation: <br>
+                    For men: <br>
+                    BMR = 10W + 6.25H - 5A + 5 <br>
+                    For women: <br>
+                    BMR = 10W + 6.25H - 5A - 161 <br>
+                    <br>
+                    Revised Harris-Benedict Equation: <br>
+                    For men: <br>
+                    BMR = 13.397W + 4.799H - 5.677A + 88.362 <br>
+                    For women: <br>
+                    BMR = 9.247W + 3.098H - 4.330A + 447.593 <br>
+                    <br>
+                    Katch-McArdle Formula: <br>
+                    BMR = 370 + 21.6(1 - F)W <br>
+                    where: <br>
+                    <br>
+                    W is body weight in kg <br>
+                    H is body height in cm <br>
+                    A is age <br>
+                    F is body fat in percentage <br>
+                </span>
+                <br>
+                The value obtained from these equations is the estimated number of calories a person can consume in a
+                day to maintain their body-weight, assuming they remain at rest. This value is multiplied by an activity
+                factor (generally 1.2-1.95) dependent on a person's typical levels of exercise, which accounts for times
+                during the day when a person is not at rest. 1 pound, or approximately 0.45 kg, equates to about 3,500
+                calories. As such, in order to lose 1 pound per week, it is recommended that 500 calories be shaved off
+                the estimate of calories necessary for weight maintenance per day. For example, if a person has an
+                estimated allotment of 2,500 calories per day to maintain body-weight, consuming 2,000 calories per day
+                for one week would theoretically result in 3,500 calories (or 1 pound) lost during the period.
+                <br> <br>
+                It is important to remember that proper diet and exercise is largely accepted as the best way to lose
+                weight. It is inadvisable to lower calorie intake by more than 1,000 calories per day, as losing more
+                than 2 pounds per week can be unhealthy, and can result in the opposite effect in the near future by
+                reducing metabolism. Losing more than 2 pounds a week will likely involve muscle loss, which in turn
+                lowers BMR, since more muscle mass results in higher BMR. Excessive weight loss can also be due to
+                dehydration, which is unhealthy. Furthermore, particularly when exercising in conjunction with dieting,
+                maintaining a good diet is important, since the body needs to be able to support its metabolic processes
+                and replenish itself. Depriving the body of the nutrients it requires as part of heavily unhealthy diets
+                can have serious detrimental effects, and weight lost in this manner has been shown in some studies to
+                be unsustainable, since the weight is often regained in the form of fat (putting the participant in a
+                worse state than when beginning the diet). As such, in addition to monitoring calorie intake, it is
+                important to maintain levels of fiber intake as well as other nutritional necessities to balance the
+                needs of the body.
+            </p>
+        </div>
+    </section>
+    <div class="end">
+        <p>
+            <a href="index.html">FitTrack</a>
+            <a href="https://github.com/Yahya-doc/FitTrack">Github</a>
+        </p>
+        <p>@ FitTrack - All rights are reserved</p>
+    </div>
 </body>
 
 </html>

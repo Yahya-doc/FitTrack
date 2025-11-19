@@ -8,6 +8,15 @@ body {
   font-style: normal;
   background: #f6f9fc;
 }
+h3 {
+  color: #21695c;
+}
+h2 {
+  color: #21695c;
+}
+span {
+  color: #21695c;
+}
 
 /* ----- NAVBAR ----- */
 .header {
@@ -158,6 +167,7 @@ button {
   color: #21695c;
   border: 1px solid #21695c;
 }
+
 .white:hover {
   background-color: #21695c;
   color: #ffffff;
@@ -251,7 +261,7 @@ button {
   align-items: center;
   padding-bottom: 150px;
 }
-.one{
+.one {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -262,19 +272,209 @@ button {
   width: 100px;
   height: auto;
 }
-.two h3{
-color: #21695c;
-font-size: 20px;
-font-weight: 700;
+.two h3 {
+  color: #21695c;
+  font-size: 20px;
+  font-weight: 700;
 }
-.end{
+.end {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 30px 100px 10px 100px;
   color: #21695c;
 }
-.end p a{
+.end p a {
   text-decoration: none;
   color: #21695c;
+}
+
+/******************************** calorie calculator *******************************/
+
+.calculator {
+  width: 90vw;
+  margin: auto;
+}
+.calc {
+  margin: 100px;
+  gap: 250px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.calc h2 {
+  font-size: 35px;
+  font-weight: bold;
+}
+.calc p {
+  padding-top: 20px;
+  /* width: 60%; */
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+}
+.input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  /* align-items: center; */
+}
+.points {
+  /* text-decoration: #21695c; */
+  font-size: 24px;
+  font-weight: 500;
+  margin: 100px 10px 100px 10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.points img {
+  border-radius: 8px;
+  width: 500px;
+  height: auto;
+}
+.content {
+  width: 80vw;
+  margin: auto;
+}
+.content h3 {
+  font-size: 30px;
+  font-weight: bold;
+}
+.content span {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+}
+.content p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+}
+.output {
+  width: 60vw;
+  margin: auto;
+  /* text-align: center; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: ; */
+}
+.intro {
+  margin: 80px;
+  gap: 200px;
+}
+.intro h2 {
+  font-size: 30px;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+.intro img {
+  border-radius: 8px;
+  width: 700px;
+  height: auto;
+}
+.tips {
+  width: 80vw;
+  margin: auto;
+}
+.tips h1 {
+  font-size: 35px;
+  font-weight: bold;
+  color: #21695c;
+}
+.tips li {
+  color: #21695c;
+  font-weight: 700;
+  font-size: 28px;
+  padding-bottom: 10px;
+}
+.tips p {
+  font-size: 20px;
+  font-weight: 400;
+}
+.plans {
+  width: 80vw;
+  margin: auto;
+}
+.plans h1 {
+  font-size: 40px;
+  font-weight: bold;
+  color: #21695c;
+  padding-bottom: 50px;
+}
+.plan {
+  gap: 350px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: self-start;
+}
+.plan h2 {
+  font-size: 24px;
+  font-weight: 500;
+  color: #21695c;
+  padding-bottom: 20px;
+}
+.plan li {
+  padding-bottom: 25px;
+  font-size: 20px;
+  font-weight: 400;
+}
+.plan p {
+  padding-top: 10px;
+  font-size: 16px;
+  line-height: 25px;
+}
+.about {
+  padding: 50px;
+}
+
+.sdg {
+  padding-top: 50px;
+  margin: auto;
+  width: 80vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+.dsg {
+  width: 300px;
+  background: #ffffff;
+  border: 2px solid #21695c;
+  border-radius: 14px;
+  padding: 18px;
+  color: #21695c;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+}
+
+.dsg:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.dsg h1 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #21695c;
+}
+
+.dsg p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333333;
+}
+.dsg:nth-child(odd) {
+  transform: translateY(-20px);
+}
+
+.dsg:nth-child(even) {
+  transform: translateY(20px);
+}
+
+/* Keep hover effect smooth */
+.dsg:hover {
+  transform: translateY(-5px) scale(1.03) !important;
 }
