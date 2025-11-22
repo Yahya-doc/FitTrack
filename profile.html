@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 Column Profile Page</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 25px;
+            font-family: Arial, sans-serif;
+            background: #ffffff;
+        }
+
+        /* Layout Container */
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 30px;
+            margin-top: 25px;
+            transition: 0.3s ease-in-out;
+        }
+
+        /* Each Column Card */
+        .section {
+            background: #ffffff;
+            padding: 20px 22px;
+            border-radius: 22px;
+            min-height: 520px;
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+            border: 1px solid #e7e8ef;
+            display: flex;
+            flex-direction: column;
+            transition: 0.3s ease-in-out;
+        }
+
+        /* Hover Lift Effect */
+        .section:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 18px 30px rgba(0, 0, 0, 0.16);
+        }
+
+        /* Section Headers */
+        .section-header {
+            background: #21695c;
+            padding: 12px 15px;
+            border-radius: 14px;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 18px;
+            color: white;
+            box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.12);
+            transition: 0.3s ease-in-out;
+        }
+
+        /* Header Hover */
+        .section-header:hover {
+            background: #1a554a;
+        }
+
+        .info-row,
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            font-size: 15px;
+            border-bottom: 1px solid #eee;
+            transition: 0.25s;
+        }
+
+        /* Row Hover */
+        .info-row:hover,
+        .stat-row:hover {
+            background: #f8f8f8;
+            padding-left: 8px;
+            border-radius: 8px;
+        }
+
+        .label {
+            font-weight: bold;
+            color: #7b8794;
+        }
+
+        .value {
+            font-weight: 600;
+            color: #111;
+        }
+
+        /* Avatar & Header Info */
+        .avatar-box {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .avatar {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            background: #21695c;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 60px;
+            margin: 0 auto;
+            border: 5px solid white;
+            color: white;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+            transition: 0.25s ease;
+        }
+
+        /* Avatar Hover Spin */
+        .avatar:hover {
+            transform: scale(1.08) rotate(3deg);
+        }
+
+        .username {
+            font-size: 26px;
+            font-weight: bold;
+            margin-top: 12px;
+            color: #222;
+        }
+
+        .email {
+            color: #555;
+            font-size: 15px;
+            margin-top: 3px;
+        }
+
+        /* Progress Bar */
+        .progress-bar {
+            width: 100%;
+            height: 14px;
+            background: #e3e6eb;
+            border-radius: 20px;
+            margin: 12px 0;
+            overflow: hidden;
+        }
+
+        .progress {
+            width: 70%;
+            height: 100%;
+            background: #21695c;
+            border-radius: 20px;
+            box-shadow: 0 0 8px rgba(33, 105, 92, 0.7);
+            transition: 0.4s ease;
+        }
+
+        /* Progress Hover Animation */
+        .progress:hover {
+            width: 80%;
+        }
+
+        /* Tips */
+        .tips ul {
+            padding-left: 18px;
+            font-size: 15.5px;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        /* ------------------ RESPONSIVE DESIGN ------------------ */
+
+        /* 2 Columns for Tablets */
+        @media (max-width: 1100px) {
+            .container {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .section {
+                min-height: 450px;
+            }
+        }
+
+        /* 1 Column for Mobile */
+        @media (max-width: 750px) {
+            body {
+                padding: 15px;
+            }
+
+            .container {
+                grid-template-columns: 1fr;
+                gap: 22px;
+            }
+
+            .section {
+                min-height: auto;
+                padding: 18px;
+            }
+
+            .avatar {
+                width: 90px;
+                height: 90px;
+                font-size: 50px;
+            }
+
+            .username {
+                font-size: 22px;
+            }
+        }
+
+        @media (max-width: 450px) {
+            .avatar {
+                width: 75px;
+                height: 75px;
+                font-size: 42px;
+            }
+
+            .username {
+                font-size: 19px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="avatar-box">
+        <div class="avatar">👨‍💻</div>
+        <div class="username">Yahya Doctor</div>
+        <div class="email">yahya.doctor25@sakec.ac.in</div>
+    </div>
+
+    <div class="container">
+
+        <!-- LEFT COLUMN – PERSONAL INFO -->
+        <div class="section">
+            <div class="section-header">Personal Information</div>
+
+            <div class="info-row">
+                <div class="label">Height:</div>
+                <div class="value">178 cm</div>
+            </div>
+            <div class="info-row">
+                <div class="label">Weight:</div>
+                <div class="value">72 kg</div>
+            </div>
+            <div class="info-row">
+                <div class="label">Age:</div>
+                <div class="value">20</div>
+            </div>
+            <div class="info-row">
+                <div class="label">BMI:</div>
+                <div class="value">22.7</div>
+            </div>
+            <div class="info-row">
+                <div class="label">Activity:</div>
+                <div class="value">Moderate</div>
+            </div>
+            <div class="info-row">
+                <div class="label">Member Since:</div>
+                <div class="value">2023</div>
+            </div>
+        </div>
+
+        <!-- MIDDLE COLUMN – STATS -->
+        <div class="section">
+            <div class="section-header">Daily Stats</div>
+
+            <div class="stat-row">
+                <div class="label">Calorie Gained:</div>
+                <div class="value">5000</div>
+            </div>
+            <div class="stat-row">
+                <div class="label">Calorie Burnt:</div>
+                <div class="value">3300</div>
+            </div>
+            <div class="stat-row">
+                <div class="label">Net Calories:</div>
+                <div class="value">1700</div>
+            </div>
+            <div class="stat-row">
+                <div class="label">Water Intake:</div>
+                <div class="value">2.7 L</div>
+            </div>
+
+            <div class="section-header" style="margin-top: 20px;">Goal Progress</div>
+
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <div style="text-align:center; color:#666; font-size:14px;">70% of Daily Goal</div>
+        </div>
+
+        <!-- RIGHT COLUMN – IMPROVEMENT TIPS -->
+        <div class="section">
+            <div class="section-header">Improvement Tips</div>
+
+            <div class="tips">
+                <ul>
+                    <li>Reduce calorie surplus by 300–400 kcal daily.</li>
+                    <li>Add 15–20 mins of light cardio post workout.</li>
+                    <li>Increase protein intake to 120g/day.</li>
+                    <li>Increase daily water intake to 3.5 liters.</li>
+                    <li>Get 7–8 hours of sleep.</li>
+                    <li>Include stretching for 8–10 minutes daily.</li>
+                    <li>Maintain a consistent workout schedule.</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

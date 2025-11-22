@@ -12,6 +12,151 @@ Log your workouts, track your progress, and get quick health tips that keep you 
     <link rel="stylesheet" href="style.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mozilla+Headline:wght@200..700&family=Nata+Sans:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Stack+Sans+Text:wght@200..700&display=swap');
+
+        @media (max-width: 1024px) {
+            .first.intro {
+                gap: 24px;
+                margin: 28px auto;
+            }
+
+            .tips h1 {
+                font-size: 1.9rem;
+            }
+
+            .plans h1 {
+                font-size: 2rem;
+            }
+
+            .plan {
+                gap: 28px;
+            }
+
+            .end {
+                padding: 0 10px;
+            }
+        }
+
+        /* Small tablets / large phones (<= 768px) */
+        @media (max-width: 768px) {
+
+            /* stack intro vertically and center text */
+            .first.intro {
+                flex-direction: column-reverse;
+                align-items: center;
+                text-align: center;
+                gap: 20px;
+            }
+
+            .first.intro>div:first-child,
+            .first.intro>div:last-child {
+                width: 100%;
+            }
+
+            .first.intro p {
+                font-size: 0.98rem;
+                padding: 0 8px;
+            }
+
+            /* reduce plan two-column to single column */
+            .plan {
+                flex-direction: column;
+                gap: 18px;
+            }
+
+            /* tips typography */
+            .tips li {
+                font-size: 1.12rem;
+            }
+
+            .tips p {
+                font-size: 0.98rem;
+            }
+
+            /* footer stacked */
+            .end {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 8px;
+            }
+        }
+
+        /* Phones (<= 480px) */
+        @media (max-width: 480px) {
+            .first.intro {
+                margin: 18px auto;
+                gap: 12px;
+            }
+
+            .left span {
+                font-size: 1.5rem;
+            }
+
+            /* smaller highlight */
+            .left h1 {
+                font-size: 1.2rem;
+            }
+
+            /* smaller heading */
+            .first.intro p {
+                font-size: 0.95rem;
+                padding: 0 6px;
+            }
+
+            .tips h1 {
+                font-size: 1.5rem;
+            }
+
+            .tips li {
+                font-size: 1.05rem;
+            }
+
+            .tips p {
+                font-size: 0.95rem;
+            }
+
+            .plans h1 {
+                font-size: 1.5rem;
+                padding-bottom: 20px;
+            }
+
+            .plan h2 {
+                font-size: 1.05rem;
+            }
+
+            .plan li {
+                font-size: 0.95rem;
+            }
+
+            .right img {
+                max-width: 92%;
+                height: auto;
+            }
+
+            /* make buttons full width & stack nicely */
+            .first .green,
+            .first .white,
+            .footer .green {
+                width: 100%;
+            }
+
+            .plan>div {
+                padding: 0 6px;
+            }
+        }
+
+        /* optional micro-fix: prevent very long lines on huge screens */
+        @media (min-width: 1400px) {
+
+            .first.intro,
+            .tips,
+            .plans,
+            .end {
+                max-width: 1200px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
     </style>
 </head>
 
@@ -22,7 +167,7 @@ Log your workouts, track your progress, and get quick health tips that keep you 
                 <a href="index.html"><img src="logo.png" alt="logo"></a>
             </div>
             <div class="tabs">
-                <nav>
+                <nav aria-label="primary">
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="healthtips.html">Health Tips</a></li>
@@ -40,6 +185,12 @@ Log your workouts, track your progress, and get quick health tips that keep you 
                             </svg></a>
                     </div>
                     <div><a href="profile.html">Profile</a></div>
+                    <button id="hamburger" class="hamburger " aria-label="Open menu" aria-expanded="false"
+                        aria-controls="mobile-drawer">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </button>
                 </div>
             </div>
         </div>
@@ -347,7 +498,7 @@ Log your workouts, track your progress, and get quick health tips that keep you 
         </p>
         <p>@ FitTrack - All rights are reserved</p>
     </div>
-    
+    <script src="script.js"></script>
 </body>
 
 </html>
